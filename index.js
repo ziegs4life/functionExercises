@@ -81,3 +81,69 @@
 //     console.log("Good Job, " + person + "!")
 // });
 //
+
+
+//Sort an array
+// var people = [
+//   'Dom',
+//   'Lyn',
+//   'Kirk',
+//   'Autumn',
+//   'Trista',
+//   'Jesslyn',
+//   'Kevin',
+//   'John',
+//   'Eli',
+//   'Juan',
+//   'Robert',
+//   'Keyur',
+//   'Jason',
+//   'Che',
+//   'Ben'
+// ];
+//
+// var newArr = people.sort(function(person1, person2) {
+//     if (person1 < person2) {
+//       return -1;
+//     } else if (person1 > person2) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+//
+// console.log(newArr);
+//
+//
+
+
+//Sort an array
+var people = [
+  'Dom',
+  'Lyn',
+  'Kirk',
+  'Autumn',
+  'Trista',
+  'Jesslyn',
+  'Kevin',
+  'John',
+  'Eli',
+  'Juan',
+  'Robert',
+  'Keyur',
+  'Jason',
+  'Che',
+  'Ben'
+];
+
+var newArr = people.sort(function(person1, person2) {
+    if (person1.length < person2.length) {
+      return -1;
+    } else if (person1 > person2) {
+        return 1;
+    } else {
+        return 0;
+    }
+});
+
+console.log(newArr);
