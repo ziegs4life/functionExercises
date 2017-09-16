@@ -189,22 +189,53 @@
 //
 // call3Times(hello);
 
+
+
+
 //Acronym
 // > acronym(['very', 'important', 'person'])
 // 'VIP'
 // > acronym(['national', 'aeronautics', 'space', 'administration'])
 // 'NASA'
-var array = (['very', 'important', 'person']);
-
-function acronym(words){
-
-    return words.reduce(function(accumulator, word) {
-        var firstLetter = word[0].toUpperCase();
-
-        return accumulator + firstLetter;
-    }, "");
 
 
+
+// var array = (['very', 'important', 'person']);
+//
+// function acronym(words){
+//
+//     return words.reduce(function(accumulator, word) {
+//         var firstLetter = word[0].toUpperCase();
+//
+//         return accumulator + firstLetter;
+//     }, "");
+//
+//
+// }
+//
+// console.log(acronym(array));
+//
+
+
+//CUSTOM MAP FUNCTION
+
+var exclaim = function(thing) {
+  return thing + "!";
 }
 
-console.log(acronym(array));
+
+function map(arr, fun) {
+    var newArray = [];
+
+    for (var i = 0; i < arr.length; i++) {
+      var element = arr[i];
+      var newElement = fun(element);
+      newArray.push(newElement);
+
+    }
+    return newArray;
+}
+
+var array = [1,2,"hi","sup"]
+
+console.log(map(array, exclaim));
