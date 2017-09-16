@@ -117,33 +117,94 @@
 //
 
 
-//Sort an array
-var people = [
-  'Dom',
-  'Lyn',
-  'Kirk',
-  'Autumn',
-  'Trista',
-  'Jesslyn',
-  'Kevin',
-  'John',
-  'Eli',
-  'Juan',
-  'Robert',
-  'Keyur',
-  'Jason',
-  'Che',
-  'Ben'
-];
+//Sort an array length
+// var people = [
+//   'Dom',
+//   'Lyn',
+//   'Kirk',
+//   'Autumn',
+//   'Trista',
+//   'Jesslyn',
+//   'Kevin',
+//   'John',
+//   'Eli',
+//   'Juan',
+//   'Robert',
+//   'Keyur',
+//   'Jason',
+//   'Che',
+//   'Ben'
+// ];
+//
+// var newArr = people.sort(function(person1, person2 {
+//     if (person1.length < person2.length) {
+//       return -1;
+//     } else if (person1.length > person2.length) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+//
+// console.log(newArr);
 
-var newArr = people.sort(function(person1, person2) {
-    if (person1.length < person2.length) {
-      return -1;
-    } else if (person1 > person2) {
-        return 1;
-    } else {
-        return 0;
-    }
-});
+//SortArray3
 
-console.log(newArr);
+// var arr = [
+//   [1, 3, 4],
+//   [2, 4, 6, 8],
+//   [3, 6]
+// ];
+//
+// array.sort(function(array1, array2){
+// var summingFunction = function(accumulator, number){
+//   return accumulator + number;
+// };
+//     var array1Sum = array.reduce(summingFunction , 0);
+//     var array2Sum = array.reduce(summingFunction, 0);
+//
+//     if (array1Sum < array2Sum) {
+//         return -1;
+//     } else {
+//         return 1;
+//     }
+//
+//
+//
+// });
+//
+// console.log(arr);
+
+// Call 3 times
+//
+// function call3Times(fun) {
+//   fun();
+//   fun();
+//   fun();
+// }
+//
+// var hello = function() {
+//   console.log("Hello World!");
+// }
+//
+// call3Times(hello);
+
+//Acronym
+// > acronym(['very', 'important', 'person'])
+// 'VIP'
+// > acronym(['national', 'aeronautics', 'space', 'administration'])
+// 'NASA'
+var array = (['very', 'important', 'person']);
+
+function acronym(words){
+
+    return words.reduce(function(accumulator, word) {
+        var firstLetter = word[0].toUpperCase();
+
+        return accumulator + firstLetter;
+    }, "");
+
+
+}
+
+console.log(acronym(array));
